@@ -1,0 +1,9 @@
+Title Text = #0a2540
+Text Color = #425466
+Background Color = #f6f9fc
+Error Color = #ff5996
+Border = #cbd6e0
+Hover / ActiveButton = #0a2540
+--shadeOneColor: #4A6FA5;  /* Light Deep Blue */
+--shadeTwoColor: #2C5282;  /* Medium Deep Blue */
+--shadeThreeColor: #1E3A8A; /* Dark Deep Blue */

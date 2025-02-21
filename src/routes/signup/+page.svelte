@@ -1,13 +1,14 @@
 <script>
-	import { goto, onNavigate } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	import BlurFade from '$lib/components/pre_components/BlurFade.svelte';
 	import InteractiveHover from '$lib/components/pre_components/InteractiveHover.svelte';
 	import Particles from '$lib/components/pre_components/Particles.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Input } from '$lib/components/ui/input/index.js';
-	import { Lock, Mail } from 'lucide-svelte';
+	import { Lock, Mail, UserRound } from 'lucide-svelte';
 
 	let input = $state({
+		username: '',
 		email: '',
 		password: ''
 	});
@@ -18,17 +19,17 @@
 		<Particles />
 	</div>
 	<header class=" mx-auto flex w-full max-w-7xl items-center justify-between px-14 py-5">
-		<BlurFade duration={0.5}>
+		<BlurFade duration={0.4}>
 			<div>
-				<h1 class="font-inter text-3xl font-black text-primary-shade">FAST</h1>
+				<h1 class=" font-inter text-3xl font-black text-primary-shade">FAST</h1>
 			</div>
 		</BlurFade>
 
-		<BlurFade duration={0.5}>
+		<BlurFade duration={0.4}>
 			<InteractiveHover
+				text="Login"
 				class="text-light_c-secondary rounded-lg px-1 py-2 font-public text-sm font-semibold"
-				text="Signup"
-				onclick={() => goto('/signup')}
+				onclick={() => goto('/login')}
 			></InteractiveHover>
 		</BlurFade>
 	</header>
@@ -39,13 +40,28 @@
 				<div class="flex items-center justify-center py-12">
 					<div class="mx-auto w-[350px] gap-6">
 						<h1 class="text-light_c-secondary mb-2 text-center font-inter text-3xl font-black">
-							Login
+							Signup
 						</h1>
-						<p class="text-light_c mb-2 text-center">Please log in to access your account.</p>
+						<p class="text-light_c mb-2 text-nowrap text-center">
+							Welcome! Sign up and explore all the features.
+						</p>
 						<form class="grid gap-4">
 							<div class="relative grid gap-2">
+								<UserRound
+									class="text-light_c-secondary pointer-events-none absolute inset-y-2.5 left-0 flex w-7 items-center pl-3 "
+								/>
+								<Input
+									id="username"
+									type="username"
+									placeholder="username"
+									required
+									class="bg-dark_c-secondary rounded-xl border-none pl-8"
+								/>
+							</div>
+
+							<div class="relative grid gap-2">
 								<Mail
-									class="text-light_c-secondary pointer-events-none  absolute inset-y-2.5 left-0 flex w-7 items-center pl-3"
+									class="text-light_c-secondary pointer-events-none absolute inset-y-2.5 left-0 flex w-7 items-center pl-3 "
 								/>
 								<Input
 									id="email"
@@ -56,9 +72,9 @@
 								/>
 							</div>
 
-							<div class="relative grid gap-2">
+							<div class=" relative grid gap-2">
 								<Lock
-									class="text-light_c-secondary pointer-events-none  absolute inset-y-2.5 left-0 flex w-7 items-center pl-3"
+									class="text-light_c-secondary pointer-events-none absolute inset-y-2.5 left-0 flex w-7 items-center pl-3 "
 								/>
 								<Input
 									id="password"
@@ -70,13 +86,9 @@
 							</div>
 							<Button
 								type="submit"
-								onclick={() => {
-									goto('/admin/announcements');
-								}}
 								class="w-full rounded-2xl bg-primary px-4 py-5 font-public font-semibold text-white hover:bg-primary-hover hover:ease-in"
+								>Signup</Button
 							>
-								Login
-							</Button>
 						</form>
 					</div>
 				</div>
