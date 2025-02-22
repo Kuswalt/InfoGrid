@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	export let className: string = '';
-	export let quantity: number = 100;
+	export let quantity: number = 500;
 	export let staticity: number = 50;
 	export let ease: number = 50;
 	export let size: number = 0.4;

@@ -26,7 +26,7 @@
 
 		<BlurFade duration={0.5}>
 			<InteractiveHover
-				class="text-light_c-secondary rounded-lg px-1 py-2 font-public text-sm font-semibold"
+				class="rounded-lg px-1 py-2 font-public text-sm font-semibold text-light_c-secondary"
 				text="Signup"
 				onclick={() => goto('/signup')}
 			></InteractiveHover>
@@ -34,38 +34,40 @@
 	</header>
 
 	<BlurFade duration={0.4} delay={0.2}>
-		<div class="flex min-h-[calc(100vh-200px)] w-full items-center justify-center p-12">
+		<div
+			class="flex min-h-[calc(100vh-200px)] w-full items-center justify-center rounded-lg bg-dark_c/70 p-10 backdrop-blur-md"
+		>
 			<div class="flex max-w-4xl items-center">
 				<div class="flex items-center justify-center py-12">
 					<div class="mx-auto w-[350px] gap-6">
-						<h1 class="text-light_c-secondary mb-2 text-center font-inter text-3xl font-black">
+						<h1 class="mb-2 text-center font-inter text-3xl font-black text-light_c-secondary">
 							Login
 						</h1>
-						<p class="text-light_c mb-2 text-center">Please log in to access your account.</p>
+						<p class="mb-2 text-center text-light_c">Please log in to access your account.</p>
 						<form class="grid gap-4">
 							<div class="relative grid gap-2">
 								<Mail
-									class="text-light_c-secondary pointer-events-none  absolute inset-y-2.5 left-0 flex w-7 items-center pl-3"
+									class="pointer-events-none absolute  inset-y-2.5 left-0 flex w-7 items-center pl-3 text-light_c-secondary"
 								/>
 								<Input
 									id="email"
 									type="email"
 									placeholder="email"
 									required
-									class="bg-dark_c-secondary rounded-xl border-none pl-8"
+									class="rounded-xl border-none bg-dark_c-secondary pl-8"
 								/>
 							</div>
 
 							<div class="relative grid gap-2">
 								<Lock
-									class="text-light_c-secondary pointer-events-none  absolute inset-y-2.5 left-0 flex w-7 items-center pl-3"
+									class="pointer-events-none absolute  inset-y-2.5 left-0 flex w-7 items-center pl-3 text-light_c-secondary"
 								/>
 								<Input
 									id="password"
 									type="password"
 									required
 									placeholder="password"
-									class="bg-dark_c-secondary rounded-xl border-none pl-8"
+									class="rounded-xl border-none bg-dark_c-secondary pl-8"
 								/>
 							</div>
 							<Button

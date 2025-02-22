@@ -79,3 +79,7 @@
 		@apply text-foreground;
 	}
 } */
+
+body::-webkit-scrollbar {
+	display: none;
+}
