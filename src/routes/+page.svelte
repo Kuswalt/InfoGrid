@@ -3,6 +3,7 @@
 	import HeadLine from '$lib/components/landing_page/HeadLine.svelte';
 	import UserSidebar from '$lib/components/landing_page/UserSidebar.svelte';
 	import LandingAnnouncements from '$lib/components/landing_page/LandingAnnouncements.svelte';
+	import AboutUs from '$lib/components/landing_page/AboutUs.svelte';
 
 	let seize = ResizeObserver;
 </script>
@@ -21,6 +22,9 @@
 	<div class="relative min-h-full w-full bg-black p-10">
 		<div class="absolute inset-0 h-full w-full">
 			<Particles />
+		</div>
+		<div class="h-auto w-full rounded-lg bg-dark_c px-7 py-8">
+			<AboutUs />
 		</div>
 		<div class="h-auto w-full">
 			<LandingAnnouncements />

@@ -63,7 +63,7 @@
 	class:has-shadow={hasOverflow}
 >
 	<span
-		class="my-2 self-center bg-opacity-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text font-inter text-2xl font-bold text-transparent md:text-5xl"
+		class="my-6 self-center bg-opacity-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text font-inter text-2xl font-bold text-transparent md:text-5xl"
 	>
 		Announcements
 	</span>
