@@ -89,11 +89,11 @@ const config: Config = {
 				'text-glitch-from': 'text-glitch-from 0.6s ease-in-out infinite',
 				'text-scale': 'text-scale 1s linear infinite forwards',
 				spin: 'spin 2s linear infinite',
-				// From UI-Snippets : https://ui.ibelick.com
-				// 'text-gradient': 'text-gradient 1.5s linear infinite',
 				'background-shine': 'background-shine 2s linear infinite',
 				'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
-				rippling: 'rippling var(--duration) ease-out'
+				rippling: 'rippling var(--duration) ease-out',
+				marquee: 'marquee var(--duration) linear infinite',
+				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
 			},
 
 			keyframes: {
@@ -202,6 +202,14 @@ const config: Config = {
 						transform: 'scale(2)',
 						opacity: '0'
 					}
+				},
+				marquee: {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+				},
+				'marquee-vertical': {
+					from: { transform: 'translateY(0)' },
+					to: { transform: 'translateY(calc(-100% - var(--gap)))' }
 				}
 			}
 		}

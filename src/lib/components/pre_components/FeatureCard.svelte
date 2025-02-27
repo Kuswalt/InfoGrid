@@ -2,8 +2,6 @@
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 
-	// Svelte 5 Code : https://svelte.dev/playground/39866a136f0d4268821e5ae901dce47f?version=5.0.5
-
 	export let collapseDelay = 5000;
 	export let ltr = false;
 	export let linePosition: 'left' | 'right' | 'top' | 'bottom' = 'left';
@@ -118,7 +116,7 @@
 								</div>
 								<div class="space-y-2">
 									<h3 class="text-lg font-bold text-light_c lg:text-2xl">{item.title}</h3>
-									<div class="w-96 text-[16px] text-neutral-400">
+									<div class="w-96 text-[16px] text-neutral-300">
 										{item.content}
 									</div>
 								</div>

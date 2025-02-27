@@ -1,6 +1,7 @@
 <script>
 	import { Eye, PackageSearch, Settings } from 'lucide-svelte';
 	import FeatureCard from '../pre_components/FeatureCard.svelte';
+	import BoxReveal from '../pre_components/BoxReveal.svelte';
 
 	let data = [
 		{
@@ -30,6 +31,61 @@
 	];
 </script>
 
-<div></div>
+<section class="flex h-full w-full justify-center gap-5 overflow-hidden pt-8">
+	<div class="w-full max-w-[50%]">
+		<BoxReveal boxColor={'#906CD5'} duration={0.5}>
+			<p class="font-inter text-[3.5rem] font-bold text-light_c">
+				What is <span class="text-primary-shade">Fast</span>?
+			</p>
+		</BoxReveal>
 
-<FeatureCard {data} />
+		<BoxReveal boxColor={'#906CD5'} duration={0.7}>
+			<p class="mt-[.5rem] text-justify font-public text-[1rem] text-neutral-200">
+				FAST (Foreign Affairs Service Tool) is an innovative, interactive platform designed to
+				simplify and streamline access to essential services provided by the Department of Foreign
+				Affairs (DFA). We serve citizens, travelers, and expatriates by offering a user-friendly,
+				mobile-ready interface that makes navigating DFA services effortless.
+			</p>
+		</BoxReveal>
+	</div>
+	<div class="w-full max-w-[50%]">
+		<BoxReveal boxColor={'#906CD5'} duration={0.5}>
+			<p class="font-inter text-[3.5rem] font-bold text-light_c">
+				What <span class="text-primary-shade">Fast</span> does?
+			</p>
+		</BoxReveal>
+
+		<BoxReveal boxColor={'#906CD5'} duration={0.7}>
+			<ul>
+				<li>
+					<p class="mt-[.5rem] text-justify font-public text-[1rem] text-neutral-200">
+						<strong>Streamlines Access:</strong> FAST acts as your go-to information hub, providing real-time
+						updates on DFA news, service requirements, and announcements—eliminating confusion and saving
+						time.
+					</p>
+				</li>
+				<li>
+					<p class="mt-[.5rem] text-justify font-public text-[1rem] text-neutral-200">
+						<strong>Enhances Efficiency:</strong> Our intuitive design empowers users to manage passport
+						applications, visa processing, and consular services with ease, whether you’re a first-time
+						applicant or a frequent visitor.
+					</p>
+				</li>
+			</ul>
+		</BoxReveal>
+	</div>
+</section>
+
+<section
+	class="mt-5 flex h-full w-full
+flex-col items-center justify-center"
+>
+	<BoxReveal boxColor={'#906CD5'} duration={0.5}>
+		<p class="font-inter text-[3.5rem] font-bold text-light_c">
+			What <span class="text-primary-shade">Fast</span> offer?
+		</p>
+	</BoxReveal>
+	<BoxReveal boxColor={'#906CD5'} duration={0.7}>
+		<FeatureCard {data} />
+	</BoxReveal>
+</section>

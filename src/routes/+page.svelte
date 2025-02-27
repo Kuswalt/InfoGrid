@@ -4,11 +4,12 @@
 	import UserSidebar from '$lib/components/landing_page/UserSidebar.svelte';
 	import LandingAnnouncements from '$lib/components/landing_page/LandingAnnouncements.svelte';
 	import AboutUs from '$lib/components/landing_page/AboutUs.svelte';
+	import LandingService from '$lib/components/landing_page/LandingService.svelte';
 
 	let seize = ResizeObserver;
 </script>
 
-<div class="relative min-h-screen w-full bg-black">
+<div class="relative flex min-h-screen w-full flex-col justify-center bg-black">
 	<div class="absolute inset-0 h-auto w-full">
 		<Particles />
 	</div>
@@ -16,9 +17,12 @@
 		<UserSidebar />
 	</div>
 
+	<!-- Headline section -->
 	<div>
 		<HeadLine />
 	</div>
+
+	<!-- About us section -->
 	<div class="relative min-h-full w-full bg-black p-10">
 		<div class="absolute inset-0 h-full w-full">
 			<Particles />
@@ -26,10 +30,18 @@
 		<div class="h-auto w-full rounded-lg bg-dark_c px-7 py-8">
 			<AboutUs />
 		</div>
-		<div class="h-auto w-full">
-			<LandingAnnouncements />
-		</div>
+	</div>
 
-		<!-- another div for another component -->
+	<!-- Service list section -->
+	<div class="relative min-h-full w-full bg-black p-10">
+		<LandingService />
+	</div>
+
+	<!-- Announcement Section -->
+	<div class="relative min-h-full w-full bg-black p-10">
+		<LandingAnnouncements />
+	</div>
+	<div>
+		<!-- footer section? our credits -->
 	</div>
 </div>

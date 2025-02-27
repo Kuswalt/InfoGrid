@@ -58,18 +58,18 @@
 </script>
 
 <div
-	class="flex h-full min-h-svh w-full max-w-7xl flex-col p-4"
+	class="max mx-auto flex h-full min-h-svh w-full flex-col p-4"
 	bind:this={container}
 	class:has-shadow={hasOverflow}
 >
-	<span
-		class="my-6 self-center bg-opacity-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text font-inter text-2xl font-bold text-transparent md:text-5xl"
+	<h1
+		class="my-6 self-center bg-opacity-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text font-inter text-6xl font-bold text-transparent md:text-5xl"
 	>
 		Announcements
-	</span>
+	</h1>
 
 	<div
-		class="mx-auto grid h-full w-full max-w-7xl grid-cols-1 justify-center justify-items-center gap-4 lg:grid-cols-3"
+		class="mx-auto grid h-full w-full grid-cols-1 justify-center justify-items-center gap-4 lg:grid-cols-3"
 	>
 		{#each announcements.slice(0, 6) as announcement}
 			<div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
@@ -105,7 +105,7 @@
 	.has-shadow {
 		border-bottom-left-radius: 1rem;
 		border-bottom-right-radius: 1rem;
-		box-shadow: inset 0 -150px 300px -150px #3b3b3be6;
+		box-shadow: inset 0 -150px 200px -150px #3b3b3be6;
 		overflow: hidden;
 	}
 </style>
