@@ -3,7 +3,7 @@
 	import * as Carousel from '$lib/components/ui/carousel';
 </script>
 
-<section class="relative flex h-auto w-full flex-col items-center justify-center bg-black">
+<section class="relative flex h-auto w-full flex-col items-center justify-center">
 	<h1
 		class="my-6 self-center bg-opacity-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text font-inter text-6xl font-bold text-transparent md:text-5xl"
 	>

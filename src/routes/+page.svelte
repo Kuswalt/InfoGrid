@@ -5,6 +5,7 @@
 	import LandingAnnouncements from '$lib/components/landing_page/LandingAnnouncements.svelte';
 	import AboutUs from '$lib/components/landing_page/AboutUs.svelte';
 	import LandingService from '$lib/components/landing_page/LandingService.svelte';
+	import DotPattern from '$lib/components/pre_components/DotPattern.svelte';
 
 	let seize = ResizeObserver;
 </script>
@@ -33,15 +34,15 @@
 	</div>
 
 	<!-- Service list section -->
-	<div class="relative min-h-full w-full bg-black p-10">
-		<LandingService />
-	</div>
+	<div class="relative min-h-full w-full">
+		<DotPattern />
+		<div class="relative min-h-full w-full p-10">
+			<LandingService />
+		</div>
 
-	<!-- Announcement Section -->
-	<div class="relative min-h-full w-full bg-black p-10">
-		<LandingAnnouncements />
-	</div>
-	<div>
-		<!-- footer section? our credits -->
+		<!-- Announcement Section -->
+		<div class="relative min-h-full w-full p-10">
+			<LandingAnnouncements />
+		</div>
 	</div>
 </div>
