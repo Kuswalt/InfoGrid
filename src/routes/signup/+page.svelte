@@ -5,6 +5,7 @@
 	import Particles from '$lib/components/pre_components/Particles.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Input } from '$lib/components/ui/input/index.js';
+	import dataFetch from '$lib/utils/service';
 	import { Lock, Mail, UserRound } from 'lucide-svelte';
 
 	let input = $state({
@@ -12,6 +13,28 @@
 		email: '',
 		password: ''
 	});
+
+	async function handleSignup() {
+		const { username, email, password } = input;
+
+		if (!username || !email || !password) {
+			alert('Please fill in all fields');
+			return;
+		}
+
+		const res = await dataFetch('auth/', 'POST', {
+			username,
+			email,
+			password
+		});
+
+		if (!res) {
+			alert('Error signing up');
+			return;
+		}
+
+		return 'oke';
+	}
 </script>
 
 <main class="relative flex h-svh w-full flex-col items-center overflow-y-hidden bg-black px-14">
@@ -56,6 +79,7 @@
 									id="username"
 									type="username"
 									placeholder="username"
+									bind:value={input.username}
 									required
 									class="rounded-xl border-none bg-dark_c-secondary pl-8"
 								/>
@@ -69,6 +93,7 @@
 									id="email"
 									type="email"
 									placeholder="email"
+									bind:value={input.email}
 									required
 									class="rounded-xl border-none bg-dark_c-secondary pl-8"
 								/>
@@ -82,12 +107,14 @@
 									id="password"
 									type="password"
 									required
+									bind:value={input.password}
 									placeholder="password"
 									class="rounded-xl border-none bg-dark_c-secondary pl-8"
 								/>
 							</div>
 							<Button
 								type="submit"
+								onclick={handleSignup}
 								class="w-full rounded-2xl bg-primary px-4 py-5 font-public font-semibold text-white hover:bg-primary-hover hover:ease-in"
 								>Signup</Button
 							>
